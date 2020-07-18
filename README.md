@@ -15,7 +15,7 @@ Our Machine Learning Model was trained using fastai, an easy to use and a very w
 The data set used in building this application was extremely biased and required significant formatting to be usable. In addition to this, there were a few difficulties in using fastai as we were working with it for the first time. We tried to make a simple UI for deploying and using the app on web. However, we faced a lot of difficulties in deploying the model. We were successful in making a UI for the app, but we could not link the model to the web app.
 
 ## Accomplishments that we're proud of
-We were immensely proud to create an application that allows people to verify the authenticity of different news reports regarding COVID and this, in turn, would significantly improve the trustworthiness of the information found online.
+We were immensely proud to create an application that allows people to verify the authenticity of different news reports regarding COVID which would significantly improve the trustworthiness of the information found online.
 
 ## What we learned
 We learned how to train models using fastai. Moreover, the concept of flask was also a new chapter in our development lives.
