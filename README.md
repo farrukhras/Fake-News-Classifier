@@ -12,7 +12,7 @@ Faker-Detector is an application which allows you to verify whether a certain ne
 Our Machine Learning Model was trained using fastai, an easy to use and a very well established deep learning library. The web application was built using React, Flask, JavaScript, CSS and HTML.
 
 ## Challenges we ran into
-The data set used in building this application was extremely biased and required significant formatting to make it usable. In addition to this, there were a few difficulties in using fastai as we were working with it for the first time. We tried to make a simple UI for deploying and using the app on web. However, we faced a lot of difficulties in deploying the model. We were successful in making a UI for the app, but we could not link the model to the web app.
+The data set used in building this application was extremely biased and required significant formatting to be usable. In addition to this, there were a few difficulties in using fastai as we were working with it for the first time. We tried to make a simple UI for deploying and using the app on web. However, we faced a lot of difficulties in deploying the model. We were successful in making a UI for the app, but we could not link the model to the web app.
 
 ## Accomplishments that we're proud of
 We were immensely proud to create an application that allows people to verify the authenticity of different news reports regarding COVID and this, in turn, would significantly improve the trustworthiness of the information found online.
