@@ -1,6 +1,6 @@
 # Faker-Detector
 
-A user friendly application designed for verifying the authenticity of COVID related news reports.  
+A user friendly application designed for verifying the authenticity of news reports.  
 
 ## Inspiration
 Recently, with the explosion of social media, the issue of fake news has become extremely prevalent, resulting in many illegal and dangerous activities. With deceptive words, online social network users can get infected by these online fake news easily, which has brought about tremendous effects on the offline society already. When misinformation is repeated and amplified, including by influential people, the grave danger is that information which is based on truth, ends up having only marginal impact. This project thus aims to detect any such fake news that might have spread due to social networking and social messaging platforms.
