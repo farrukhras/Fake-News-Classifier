@@ -9,22 +9,18 @@ CORS(app, support_credentials=True)
 learn = load_learner(path='./models', file='export.pkl')
 classes = learn.data.classes
 
-
-def predict_single(input_text):
-    'function to take image and return prediction'
-    prediction = learn.predict(input_text)
-    probs_list = prediction[2].numpy()
-    return {
-        'category': classes[prediction[1].item()],
-        'probs': {c: round(float(probs_list[i]), 5) for (i, c) in enumerate(classes)}
-    }
-
-
-route for prediction
-@app.route('/predict', methods=['POST'])
+# route for prediction
+@app.route('/', methods=['POST'])
 def predict():
-    print(request)
-    # return jsonify(predict_single(request.files['image']))
+    req_data = request.get_json() # format : {'text': 'some corona related news'}
+    text = req_data['text']
+    text = 'WASHINGTON (Reuters) - ' + text
+    pred_class, pred_idx, outputs = learn.predict(text)
+    if pred_class.obj == 1:
+        return "False"
+    else:
+        return "True"
 
+# http://127.0.0.1:5000/
 if __name__ == '__main__':
-    app.run()
+    app.run(threaded=True)
