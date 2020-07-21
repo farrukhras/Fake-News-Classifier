@@ -1,29 +1,37 @@
 import React, { Component } from 'react' ;
-import Todos from './Todos'
-import AddTod from './AddForm'
+import AllNews from './News'
+import AddNew from './AddNews'
 
 class App extends Component {
   state = {
-    todos: [
-    
+    news: [
+      {id:1, content: 'Stomach acid will kill the coronavirus :', truth: 'False'} ,
     ]
   }
 
-  deleteTodo = (id) => {
-    const todos = this.state.todos.filter(todo => {
-      return todo.id !== id
+  deleteNews = (id) => {
+    const news = this.state.news.filter(neWs => {
+      return neWs.id !== id
     }) ;
 
     this.setState({
-      todos 
+      news 
     })
   }
 
-  addTodo = (todo) => {
-    todo.id = Math.random() ;
-    let todos = [...this.state.todos, todo] ;
+  addNews = (neWs) => {
+    // http://127.0.0.1:5000/
+
+    // API handling
+
+    // API handling ends
+
+    neWs.id = Math.random() ;
+    neWs.truth = "True" ;
+    neWs.content = neWs.content + ' :' ;
+    let news = [...this.state.news, neWs] ;
     this.setState({
-      todos 
+      news 
     })
   }
 
@@ -31,8 +39,8 @@ class App extends Component {
     return (
       <div className='todo-app container'>
         <h1>Fake News Detector</h1>
-        <AddTod addTodo={this.addTodo}/>
-        <Todos todos={ this.state.todos } deleteTodo={ this.deleteTodo }/>
+        <AddNew addNews={this.addNews}/>
+        <AllNews allNews={ this.state.news } deleteNews={ this.deleteNews }/>
         <div class="footer">
           <p>Bay Area Hacks</p>
         </div>
