@@ -1,0 +1,7 @@
+https://faker-detector.herokuapp.com/
+
+It only accepts POST request
+You can test through post man
+Takes json object in body argument
+format: {'text': 'some corona related news'}
+output: either True or False (in string format, NOT boolean)
